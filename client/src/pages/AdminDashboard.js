@@ -12,6 +12,7 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 import './AdminDashboard.css';
+import { API_BASE_URL } from '../config';
 
 function AdminDashboard() {
   const { user, token } = useContext(AuthContext);
@@ -28,14 +29,14 @@ function AdminDashboard() {
 
     const fetchDashboard = async () => {
       try {
-        const dashboardRes = await axios.get('http://localhost:5000/api/admin/dashboard', {
+        const dashboardRes = await axios.get(`${API_BASE_URL}/api/admin/dashboard`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         });
         setMessage(dashboardRes.data.message);
 
-        const summaryRes = await axios.get('http://localhost:5000/api/admin/summary', {
+        const summaryRes = await axios.get(`${API_BASE_URL}/api/admin/summary`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

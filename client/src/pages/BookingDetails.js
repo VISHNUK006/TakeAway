@@ -4,6 +4,7 @@ import axios from 'axios';
 import Navbar from '../components/Navbar';
 import { AuthContext } from '../context/AuthContext';
 import './BookingDetails.css';
+import { API_BASE_URL } from '../config';
 
 function BookingDetails() {
   const { token } = useContext(AuthContext);
@@ -14,7 +15,7 @@ function BookingDetails() {
 
     const fetchBookings = useCallback(async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/booking/mybooking', {
+      const res = await axios.get(`${API_BASE_URL}/api/booking/mybooking`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setBookings(res.data);
@@ -43,7 +44,7 @@ function BookingDetails() {
 
   const handleSave = async () => {
     try {
-      await axios.put(`http://localhost:5000/api/booking/my/${editingId}`, editForm, {
+      await axios.put(`${API_BASE_URL}/api/booking/my/${editingId}`, editForm, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setEditingId(null);
@@ -56,7 +57,7 @@ function BookingDetails() {
 
     const handleCancel = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/booking/${id}`, {
+      await axios.delete(`${API_BASE_URL}/api/booking/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setMsg('✅ Booking cancelled');

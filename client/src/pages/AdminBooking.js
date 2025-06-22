@@ -4,6 +4,7 @@ import axios from 'axios';
 import { AuthContext } from '../context/AuthContext';
 import AdminHeader from '../components/AdminHeader';
 import './AdminBooking.css';
+import { API_BASE_URL } from '../config';
 
 function AdminBookings() {
   const { token } = useContext(AuthContext);
@@ -11,7 +12,7 @@ function AdminBookings() {
 
   const fetchBookings = useCallback(() => {
     axios
-      .get('http://localhost:5000/api/booking/admin/booking', {
+      .get(`${API_BASE_URL}/api/booking/admin/booking`, {
         headers: { Authorization: `Bearer ${token}` }
       })
       .then(res => setBookings(res.data));
@@ -22,7 +23,7 @@ function AdminBookings() {
   }, [fetchBookings]);
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:5000/api/booking/admin/${id}`, {
+    await axios.delete(`${API_BASE_URL}/api/booking/admin/${id}`, {
       headers: { Authorization: `Bearer ${token}` }
     });
     fetchBookings();

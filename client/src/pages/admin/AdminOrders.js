@@ -5,6 +5,7 @@ import { AuthContext } from '../../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import AdminHeader from '../../components/AdminHeader';
 import './AdminOrders.css';
+import { API_BASE_URL } from '../../config';
 
 function AdminOrders() {
   const { user, token } = useContext(AuthContext);
@@ -15,7 +16,7 @@ function AdminOrders() {
 
   const fetchOrders = useCallback(async () => {
   try {
-    const res = await axios.get('http://localhost:5000/api/admin/orders', {
+    const res = await axios.get(`${API_BASE_URL}/api/admin/orders`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -50,7 +51,7 @@ useEffect(() => {
     const newStatus = updatingStatus[orderId];
     try {
       await axios.put(
-        `http://localhost:5000/api/admin/orders/${orderId}/status`,
+        `${API_BASE_URL}/api/admin/orders/${orderId}/status`,
         { status: newStatus },
         {
           headers: {

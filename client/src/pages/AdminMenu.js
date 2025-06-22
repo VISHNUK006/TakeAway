@@ -4,6 +4,7 @@ import axios from 'axios';
 import { AuthContext } from '../context/AuthContext';
 import AdminHeader from '../components/AdminHeader';
 import './AdminMenu.css';
+import { API_BASE_URL } from '../config';
 
 function AdminMenu() {
   const { token } = useContext(AuthContext);
@@ -22,7 +23,7 @@ function AdminMenu() {
 
   const fetchMenu = useCallback(async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/admin/menu?search=${search}`, {
+      const res = await axios.get(`${API_BASE_URL}/api/admin/menu?search=${search}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setMenuItems(res.data);
@@ -59,7 +60,7 @@ function AdminMenu() {
 
     try {
       if (editingId) {
-        await axios.put(`http://localhost:5000/api/admin/menu/${editingId}`, formData, {
+        await axios.put(`${API_BASE_URL}/api/admin/menu/${editingId}`, formData, {
           headers: {
             Authorization: `Bearer ${token}`,
             'Content-Type': 'multipart/form-data',
@@ -67,7 +68,7 @@ function AdminMenu() {
         });
         setMsg('✅ Item updated!');
       } else {
-        await axios.post('http://localhost:5000/api/admin/menu', formData, {
+        await axios.post(`${API_BASE_URL}/api/admin/menu`, formData, {
           headers: {
             Authorization: `Bearer ${token}`,
             'Content-Type': 'multipart/form-data',
@@ -94,13 +95,13 @@ function AdminMenu() {
       image: null,
     });
     setEditingId(item._id);
-    setPreviewUrl(item.image ? `http://localhost:5000${item.image}` : null);
+    setPreviewUrl(item.image ? `${API_BASE_URL}${item.image}` : null);
     setMsg('');
   };
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/admin/menu/${id}`, {
+      await axios.delete(`${API_BASE_URL}/api/admin/menu/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchMenu();
@@ -190,7 +191,7 @@ function AdminMenu() {
                 <p>{item.description}</p>
                 {item.image && (
                   <img
-                    src={`http://localhost:5000${item.image}`}
+                    src={`${API_BASE_URL}${item.image}`}
                     alt={item.name}
                     width="100"
                   />

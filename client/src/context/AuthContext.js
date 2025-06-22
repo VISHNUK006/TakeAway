@@ -1,6 +1,7 @@
 
 import React, { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
+import { API_BASE_URL } from '../config';
 
 export const AuthContext = createContext();
 
@@ -27,7 +28,7 @@ export const AuthProvider = ({ children }) => {
     const storedToken = localStorage.getItem('token');
     if (storedToken) {
       axios
-        .get('http://localhost:5000/api/auth/profile', {
+        .get(`${API_BASE_URL}/api/auth/profile`, {
           headers: { Authorization: `Bearer ${storedToken}` },
         })
         .then((res) => {

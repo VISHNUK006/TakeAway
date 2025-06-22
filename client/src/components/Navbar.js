@@ -4,6 +4,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { FaUser, FaShoppingCart, FaSearch, FaBars } from 'react-icons/fa';
 import { AuthContext } from '../context/AuthContext';
 import './Navbar.css';
+import { API_BASE_URL } from '../config';
 
 function Navbar() {
   const { user, logoutUser } = useContext(AuthContext);
@@ -19,7 +20,7 @@ function Navbar() {
 
   useEffect(() => {
     if (search.trim().length > 0) {
-      fetch(`http://localhost:5000/api/menu?search=${search}`)
+      fetch(`${API_BASE_URL}/api/menu?search=${search}`)
         .then(res => res.json())
         .then(data => {
           setSuggestions(data.slice(0, 5));

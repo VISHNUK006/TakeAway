@@ -7,6 +7,7 @@ import Navbar from '../components/Navbar';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Cart.css';
+import { API_BASE_URL } from '../config';
 
 function Cart() {
   const { cartItems, removeFromCart, updateQty } = useContext(CartContext);
@@ -51,7 +52,7 @@ function Cart() {
               <div className="cart-item" key={item._id}>
                 {item.image ? (
                         <img
-                          src={`http://localhost:5000${item.image}`}
+                          src={`${API_BASE_URL}${item.image}`}
                           alt={item.name}
                           className="menu-image"
                         />

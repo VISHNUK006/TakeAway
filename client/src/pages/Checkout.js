@@ -4,6 +4,7 @@ import { CartContext } from '../context/CartContext';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import './Checkout.css';
+import { API_BASE_URL } from '../config';
 
 function Checkout() {
   const navigate = useNavigate();
@@ -74,7 +75,7 @@ const initMap = () => {
     if (!confirmPayment) return;
 
     try {
-      const response = await fetch('http://localhost:5000/api/orders', {
+      const response = await fetch(`${API_BASE_URL}/api/orders`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -122,7 +123,7 @@ const initMap = () => {
     try {
       const receiptId = 'receipt_' + Date.now();
 
-      const orderRes = await fetch('http://localhost:5000/api/payment/create-order', {
+      const orderRes = await fetch(`${API_BASE_URL}/api/payment/create-order`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -141,7 +142,7 @@ const initMap = () => {
         description: 'Food Order Payment',
         order_id: data.id,
         handler: async function (response) {
-          const verifyRes = await fetch('http://localhost:5000/api/payment/verify', {
+          const verifyRes = await fetch(`${API_BASE_URL}/api/payment/verify`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

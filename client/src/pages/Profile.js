@@ -6,6 +6,7 @@ import Navbar from '../components/Navbar';
 import './Profile.css';
 import defaultAvatar from '../assets/default-avatar.png'; 
 import { useNavigate } from 'react-router-dom';
+import { API_BASE_URL } from '../config';
 
 function Profile() {
 const { token, logoutUser } = useContext(AuthContext);
@@ -16,7 +17,7 @@ const navigate = useNavigate();
 useEffect(() => {
 const fetchProfile = async () => {
 try {
-const res = await axios.get('http://localhost:5000/api/auth/profile', {
+const res = await axios.get(`${API_BASE_URL}/api/auth/profile`, {
 headers: { Authorization: `Bearer ${token}` },
 });
 setUser(res.data);
@@ -52,7 +53,7 @@ return (
 <div className="profile-card">
 <div className="profile-image">
 <img
-  src={user.profilePicture ? `http://localhost:5000${user.profilePicture}` : defaultAvatar}
+  src={user.profilePicture ? `${API_BASE_URL}${user.profilePicture}` : defaultAvatar}
   alt="Profile"
 />
 </div>

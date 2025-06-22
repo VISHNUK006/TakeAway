@@ -6,6 +6,7 @@ import { AuthContext } from '../context/AuthContext';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import './BookTable.css';
+import { API_BASE_URL } from '../config';
 
 
 function BookTable() {
@@ -31,7 +32,7 @@ function BookTable() {
   const handleBooking = async (paymentMode, paymentStatus) => {
     try {
       const res = await axios.post(
-        'http://localhost:5000/api/booking',
+        `${API_BASE_URL}/api/booking`,
         { ...form, paymentMode, paymentStatus },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -69,7 +70,7 @@ function BookTable() {
     const res = await loadRazorpayScript();
     if (!res) return toast.error('Razorpay SDK failed');
 
-    const orderRes = await fetch('http://localhost:5000/api/payment/create-order', {
+    const orderRes = await fetch(`${API_BASE_URL}/api/payment/create-order`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ amount: 200, receipt: 'receipt_booking_' + Date.now() }),
@@ -85,7 +86,7 @@ function BookTable() {
       description: 'Table Booking Payment',
       order_id: data.id,
       handler: async function (response) {
-        const verifyRes = await fetch('http://localhost:5000/api/payment/verify', {
+        const verifyRes = await fetch(`${API_BASE_URL}/api/payment/verify`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import Navbar from '../components/Navbar';
 import './Contact.css';
+import { API_BASE_URL } from '../config';
 
 function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
@@ -14,7 +15,7 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/contact', form);
+      const res = await axios.post(`${API_BASE_URL}/api/contact`, form);
       setMsg('✅ ' + res.data.message);
       setForm({ name: '', email: '', message: '' });
     } catch (err) {

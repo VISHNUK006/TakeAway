@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import './OrderHistory.css';
+import { API_BASE_URL } from '../config';
 
 function Orders() {
   const [orders, setOrders] = useState([]);
@@ -14,7 +15,7 @@ function Orders() {
     return;
   }
 
-  fetch('http://localhost:5000/api/orders', {
+  fetch(`${API_BASE_URL}/api/orders`, {
     headers: {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${localStorage.getItem('token')}`,

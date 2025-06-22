@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 import Navbar from '../components/Navbar';
 import './Menu.css';
+import { API_BASE_URL } from '../config';
 
 function Menu() {
   const location = useLocation();
@@ -15,7 +16,7 @@ function Menu() {
   const { addToCart } = useContext(CartContext);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/menu')
+    fetch(`${API_BASE_URL}/api/menu`)
       .then((res) => res.json())
       .then((data) => {
         console.log("Fetched Menu Items:", data); 

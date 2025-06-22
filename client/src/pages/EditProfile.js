@@ -4,6 +4,7 @@ import axios from 'axios';
 import { AuthContext } from '../context/AuthContext';
 import './EditProfile.css';
 import { useNavigate } from 'react-router-dom';
+import { API_BASE_URL } from '../config';
 
 function EditProfile() {
   const { token, user, loginUser } = useContext(AuthContext);
@@ -34,7 +35,7 @@ function EditProfile() {
     e.preventDefault();
     try {
       const res = await axios.patch(
-        'http://localhost:5000/api/auth/profile',
+        `${API_BASE_URL}/api/auth/profile`,
         formData,
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -43,7 +44,7 @@ function EditProfile() {
         const imgData = new FormData();
         imgData.append('image', image);
 
-        await axios.post('http://localhost:5000/api/auth/upload', imgData, {
+        await axios.post(`${API_BASE_URL}/api/auth/upload`, imgData, {
           headers: {
             Authorization: `Bearer ${token}`,
             'Content-Type': 'multipart/form-data',
