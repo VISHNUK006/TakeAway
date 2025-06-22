@@ -4,6 +4,7 @@ import axios from 'axios';
 import { AuthContext } from '../context/AuthContext';
 import Navbar from '../components/Navbar';
 import './TrackOrder.css';
+import { API_BASE_URL } from '../config'; // Assuming you have a config file for API base URL
 
 function TrackOrder() {
   const { id } = useParams(); 
@@ -28,7 +29,7 @@ function TrackOrder() {
   useEffect(() => {
     const fetchOrder = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/orders/${id}`, {
+        const res = await axios.get(`${API_BASE_URL}/api/orders/${id}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },

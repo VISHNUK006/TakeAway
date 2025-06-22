@@ -80,7 +80,7 @@ function Menu() {
                     <div className="menu-card" key={item._id}>
                       {item.image ? (
                         <img
-                          src={`http://localhost:5000${item.image}`}
+                          src={`${API_BASE_URL}${item.image}`}
                           alt={item.name}
                           className="menu-image"
                         />
