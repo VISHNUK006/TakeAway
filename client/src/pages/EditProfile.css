@@ -1,0 +1,70 @@
+.e-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 2rem;
+}
+
+.editprofile-container {
+  background-color: #1c1c1c;
+  padding: 2rem;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 25px rgba(255, 204, 0, 0.919);
+  color: #fff;
+}
+
+.editprofile-container h2 {
+  text-align: center;
+  color: #ffcc00;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.edit-form input[type="text"],
+.edit-form input[type="email"],
+.edit-form input[type="password"],
+.edit-form input[type="file"] {
+  padding: 0.8rem 1rem;
+  border: 1px solid #555;
+  border-radius: 10px;
+  background-color: #2a2a2a;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.edit-form input[type="file"] {
+  padding: 0.6rem;
+  background-color: #2b2b2b;
+}
+
+.edit-form button {
+  padding: 0.9rem;
+  background-color: #ffcc00;
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-form button:hover {
+  background-color: #e6b800;
+}
+
+.edit-form p {
+  text-align: center;
+  font-weight: bold;
+  color: #00cc66;
+  margin-top: 0.5rem;
+}

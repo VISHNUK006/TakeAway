@@ -1,0 +1,91 @@
+.admin-dashboard {
+  max-width: 700px;
+  margin: 3rem auto;
+  background-color: #1c1c1c;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.2);
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.admin-dashboard h2 {
+  color: #ffcc00;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.success {
+  color: #28a745;
+  margin-bottom: 1rem;
+}
+
+.error {
+  color: #dc3545;
+  margin-bottom: 1rem;
+}
+
+.admin-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.admin-actions button {
+  background-color: #ffcc00;
+  color: #000;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-actions button:hover {
+  background-color: #e6b800;
+}
+
+.dashboard-cards {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.card {
+  flex: 1;
+  background: #222;
+  color: white;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.3);
+}
+
+.card i {
+  font-size: 1.5rem;
+  color: #ffcc00;
+}
+
+.chart-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  background-color: #2a2a2a;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.1);
+  color: #ffcc00;
+  text-align: center;
+}
+
+
+
+@media (min-width: 600px) {
+  .admin-actions {
+    flex-direction: row;
+    justify-content: center;
+  }
+}

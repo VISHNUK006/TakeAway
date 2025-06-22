@@ -1,0 +1,86 @@
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  min-height: 100vh;
+  background-color: #111;
+}
+
+.about-page {
+  background-color: #1c1c1c;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.7);
+  max-width: 900px;
+  width: 100%;
+}
+
+.about-page h2 {
+  color: #ffcc00;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-page p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: #ddd;
+}
+
+.about-page strong {
+  color: #ffcc00;
+}
+
+.contact-details h3,
+.social-icons h3 {
+  color: #ffcc00;
+  margin-top: 2rem;
+  font-size: 1.4rem;
+}
+
+.contact-details p,
+.social-icons a {
+  color: #f5f5f5;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.social-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+.social-label svg {
+  color: #1e90ff; 
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.icons a {
+  font-size: 1.5rem;
+  color: #ffcc00;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.icons a:hover {
+  transform: scale(1.2);
+  color: #e6b800;
+}

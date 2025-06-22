@@ -1,0 +1,48 @@
+.admin-header {
+  background-color: #343a40;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 4px solid #28a745;
+}
+
+.admin-header .logo h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.admin-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.admin-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 10px;
+  transition: background 0.3s;
+  border-radius: 4px;
+}
+
+.admin-nav a:hover {
+  background-color: #495057;
+}
+
+.admin-nav button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.admin-nav button:hover {
+  background-color: #c82333;
+}

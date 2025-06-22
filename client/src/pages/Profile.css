@@ -1,0 +1,68 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-container h2 {
+    font-size: 2.5rem;
+    color: #ffcc00;
+    margin-bottom: 1.5rem;
+    font-family: 'Playfair Display', serif, sans-serif;
+}
+
+.profile-card {
+  background-color: #1c1c1c;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.4);
+  max-width: 450px;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.profile-image img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid #ffcc00;
+}
+
+.profile-card p {
+  color: #f0f0f0;
+  margin: 0.5rem 0;
+  font-size: 1.05rem;
+}
+
+.profile-card strong {
+  color: #ffcc00;
+}
+
+.logout-btn {
+  background-color: #ffcc00;
+  color: #000;
+  border: none;
+  padding: 10px 18px;
+  margin: 0.7rem;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.logout-btn:hover {
+  background-color: #e6b800;
+  transform: scale(1.05);
+}
+
+.logout-btn:last-child {
+  background-color: #ff4c4c;
+  color: white;
+}
+
+.logout-btn:last-child:hover {
+  background-color: #cc0000;
+}
