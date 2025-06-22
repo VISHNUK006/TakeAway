@@ -20,7 +20,7 @@ function Checkout() {
   const loadGoogleMaps = async () => {
     if (!window.google) {
       const script = document.createElement('script');
-      script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCKazUN0C1-r_biBUAc_-vga2zGivDrsR8`;
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_API_KEY}`;
       script.async = true;
       script.defer = true;
       script.onload = initMap;
