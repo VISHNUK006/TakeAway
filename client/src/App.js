@@ -28,6 +28,7 @@ import './App.css'; //
 export default function App() {
   return (
     <AuthProvider>
+      <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
@@ -48,6 +49,7 @@ export default function App() {
         <Route path="/admin/booking" element={<AdminBookings />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+       </Router>
        <ToastContainer position="top-center" />
     </AuthProvider>
   );
