@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/TakeAway/static/css/main.373650fd.css",
-    "main.js": "/TakeAway/static/js/main.e0167247.js",
+    "main.js": "/TakeAway/static/js/main.08604f6a.js",
     "static/js/453.258b012d.chunk.js": "/TakeAway/static/js/453.258b012d.chunk.js",
     "static/media/default-avatar.png": "/TakeAway/static/media/default-avatar.a6143582309785dca610.png",
     "index.html": "/TakeAway/index.html",
     "main.373650fd.css.map": "/TakeAway/static/css/main.373650fd.css.map",
-    "main.e0167247.js.map": "/TakeAway/static/js/main.e0167247.js.map",
+    "main.08604f6a.js.map": "/TakeAway/static/js/main.08604f6a.js.map",
     "453.258b012d.chunk.js.map": "/TakeAway/static/js/453.258b012d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.373650fd.css",
-    "static/js/main.e0167247.js"
+    "static/js/main.08604f6a.js"
   ]
 }
