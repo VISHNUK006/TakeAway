@@ -1,6 +1,7 @@
 
 import React from 'react';
 import Navbar from '../components/Navbar';
+import { Link } from 'react-router-dom';
 import './Home.css';
 
 function Home() {
@@ -14,7 +15,7 @@ function Home() {
           <p className="hero-subtitle">
             Welcome to <strong>TastyBites</strong> – where flavor meets passion. We are a fast-food brand dedicated to delivering mouthwatering meals made from the freshest ingredients.Founded with the mission to serve quick, delicious, and affordable food, our chefs craft each dish with love and creativity. Whether you're craving burgers, fries, or something new, Feane has something special for every taste bud.
           </p>
-          <a href="/menu" className="menu-button">Order Now</a>
+          <Link to="/menu" className="menu-button">Order Now</Link>
         </div>
       </section>
       <footer className="footer">
@@ -25,10 +26,10 @@ function Home() {
     </div>
 
     <div className="footer-links">
-      <a href="/">Home</a>
-      <a href="/menu">Menu</a>
-      <a href="/about">About</a>
-      <a href="/contact">Contact</a>
+      <Link to="/">Home</Link>
+      <Link to="/menu">Menu</Link>
+      <Link to="/about">About</Link>
+      <Link to="/contact">Contact</Link>
     </div>
 
     <div className="footer-social">
