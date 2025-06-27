@@ -13,7 +13,7 @@ function Home() {
         <div className="home-text">
           <h1 className="hero-title">Fast Food Restaurant</h1>
           <p className="hero-subtitle">
-            Welcome to <strong>TastyBites</strong> – where flavor meets passion. We are a fast-food brand dedicated to delivering mouthwatering meals made from the freshest ingredients.Founded with the mission to serve quick, delicious, and affordable food, our chefs craft each dish with love and creativity. Whether you're craving burgers, fries, or something new, Feane has something special for every taste bud.
+            Welcome to <strong>TakeAway</strong> – where flavor meets passion. We are a fast-food brand dedicated to delivering mouthwatering meals made from the freshest ingredients.Founded with the mission to serve quick, delicious, and affordable food, our chefs craft each dish with love and creativity. Whether you're craving burgers, fries, or something new, Feane has something special for every taste bud.
           </p>
           <Link to="/menu" className="menu-button">Order Now</Link>
         </div>
@@ -21,7 +21,7 @@ function Home() {
       <footer className="footer">
   <div className="footer-container">
     <div className="footer-brand">
-      <h2>TastyBites 🍔</h2>
+      <h2>TakeAway 🍔</h2>
       <p>Fast, fresh & delicious. Order your favorites now!</p>
     </div>
 
@@ -40,7 +40,7 @@ function Home() {
   </div>
 
   <div className="footer-bottom">
-    <p>&copy; {new Date().getFullYear()} TastyBites. All rights reserved.</p>
+    <p>&copy; {new Date().getFullYear()} TakeAway. All rights reserved.</p>
   </div>
 </footer>
 

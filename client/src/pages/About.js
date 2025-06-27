@@ -11,9 +11,9 @@ function About() {
     <Navbar />
     <div className="page-wrapper">
     <div className="container about-page">
-      <h2>About TastyBites</h2>
+      <h2>About TakeAway</h2>
       <p>
-        At <strong>TastyBites</strong>, we believe that great food doesn’t have to be complicated. We are a modern fast-food restaurant committed to serving delicious, freshly prepared meals that satisfy both hunger and taste. Whether you're on a quick lunch break or enjoying a casual dinner with friends, we deliver the perfect combination of speed, flavor, and value.
+        At <strong>TakeAway</strong>, we believe that great food doesn’t have to be complicated. We are a modern fast-food restaurant committed to serving delicious, freshly prepared meals that satisfy both hunger and taste. Whether you're on a quick lunch break or enjoying a casual dinner with friends, we deliver the perfect combination of speed, flavor, and value.
       </p>
       <p>
         From juicy burgers and crispy fries to sizzling wraps, zesty wings, and refreshing beverages, our diverse menu is crafted to please every palate. Every dish is made with high-quality ingredients, cooked to perfection, and served with a smile.
@@ -35,12 +35,12 @@ function About() {
         🚚 Fast delivery & takeaway options for your busy lifestyle
       </p>
       <h3>
-        At TastyBites, fast food is more than a meal — it's a moment of joy. Come hungry, leave happy.
+        At TakeAway, fast food is more than a meal — it's a moment of joy. Come hungry, leave happy.
       </h3>
       <div className="contact-details">
         <h3>📞 Contact Us</h3>
         <p><FontAwesomeIcon icon={faPhone} /> +91 1234567890</p>
-        <p><FontAwesomeIcon icon={faEnvelope} /> support@tastybites.com</p>
+        <p><FontAwesomeIcon icon={faEnvelope} /> support@takeaway.com</p>
         <p><FontAwesomeIcon icon={faMapMarkerAlt} /> 123 Food Street, Chennai, India</p>
       </div>
       <div className="social-icons">

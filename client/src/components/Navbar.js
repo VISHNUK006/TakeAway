@@ -66,7 +66,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <Link to="/">TastyBites</Link>
+        <Link to="/">TakeAway</Link>
       </div>
 
       <div className="hamburger" onClick={() => setMenuOpen(prev => !prev)}>

@@ -82,7 +82,7 @@ function BookTable() {
       key: process.env.REACT_APP_RAZORPAY_KEY_ID,
       amount: data.amount,
       currency: data.currency,
-      name: 'TastyBites',
+      name: 'TakeAway',
       description: 'Table Booking Payment',
       order_id: data.id,
       handler: async function (response) {
