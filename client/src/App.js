@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import Home from './pages/Home';
 import Menu from './pages/Menu';
@@ -28,7 +28,6 @@ import './App.css'; //
 export default function App() {
   return (
     <AuthProvider>
-      <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
@@ -49,7 +48,6 @@ export default function App() {
         <Route path="/admin/booking" element={<AdminBookings />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-       </Router>
        <ToastContainer position="top-center" />
     </AuthProvider>
   );
